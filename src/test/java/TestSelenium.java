@@ -30,8 +30,7 @@ public class TestSelenium {
             $("[href=\"#3-using-junit5-extend-test-class\"]").shouldHave(text(" Using JUnit5 extend test class:"));
 
 
-            $("#user-content-3-using-junit5-extend-test-class").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})\n" +
-                    "class Tests {\n" +
+            $("#user-content-3-using-junit5-extend-test-class+div").$("pre").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})\n" +                    "class Tests {\n" +
                     "  @Test\n" +
                     " void test() {\n" +
                     "    Configuration.assertionMode = SOFT;\n" +
